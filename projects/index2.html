@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortalphabets(){
+            let inputstring=prompt("enter a string:");
+            if (!inputstring){
+                alert("no input provided!");
+                return;
+            }
+            inputstring=inputstring.replace(/\s+/g,"");
+            let sortedascending=inputstring.split("").sort().join("");
+            let sorteddescending=inputstring.split("").sort().reverse().join("");
+            alert('ascending: ${sortedascending}\ndescending: ${sorteddescending}');
+        }
+        sortalphabets();
+    </script>
+</body>
+</html>

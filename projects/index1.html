@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="seacrhwordinmessage()">searchword</button>
+    
+    <script>
+     function searchwordinmessage(){
+        let message = "welcome to the party";
+
+        let wordsarray=message.tolowercase().split(" ");
+
+        let userinput =prompt("enter a word to search:");
+
+        if (!userinput){
+            alert("no word entered!");
+            return;
+        }
+        userinput=userinput.tolowercase().trim();
+
+        if (wordsarray.includes(userinput)){
+            alert('the word "${userinput}"was found in the message!')
+    
+        }else {
+            alert('the word "${userinput}"was NOT found in the message.');
+        }
+     }
+     searchwordinmessage();
+    </script>
+</body>
+</html>
